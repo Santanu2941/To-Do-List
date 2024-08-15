@@ -1,60 +1,121 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f7f7f7;
+*{
+   margin: 0;
+   box-sizing: border-box;
 }
 
-.todo-container {
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+body{
+    background-image: url('https://wallpapercave.com/wp/wp3701541.jpg');
+    background-size: cover;
+    overflow: hidden;
+ }
+ .navbar{
+   font-family: "Edu VIC WA NT Beginner", cursive;
+   font-weight: bolder;
+   font-size: 1.3rem;
+   display: flex;
+   justify-content: space-between;
+   padding: 10px 40px;
+   align-items: center;
+ }
+ .navbar a{
+   text-decoration: none;
+   color: blue;
+ }
+ .logo{
+   display: flex;
+   align-items: center;
+ }
+ .logo img{
+   margin-right: 15px;
+   width: 50px;
+ }
+ .main-container{
+   margin-top: 6%;
+   display: flex;
+   justify-content: left;
+   margin-left: 10%;
+   height: 100vh;
+ }
+ .todo h1{
+   font-family: "Edu VIC WA NT Beginner", cursive;
+ } 
+ .todo{
+    width: 375px;
+    padding: 33px;
+    max-height: 500px;
+    text-align: center;
+    background-color: #fff;
+    overflow-y: scroll;
+    border-radius: 8px;
+    align-items: center;
+ }
+ input{
+    width: 280px;
+    padding: 8px 45px 8px 8px;
+    border: 2px solid rgb(6, 145, 145);
+    outline: none;
+    font-size: 18px;
+    border-radius: 5px;
+ }
+ .bx-plus{
+   position: relative;
+   left: -30px;
+   font-size: 1.3rem;
+ }
 
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
+ .text ul{
+    position: relative;
+    background-color: gray;
+    color: white;
+    font-size: 19px;
+    padding: 7px;
+    text-align: left;
+    margin: 5px 1px;
+    width: 280px;
+    overflow: hidden;
+    border-radius: 5px;
+ }
 
-input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
+ .text ul i{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+ }
+ /* Hide scrollbar for Chrome, Safari and Opera */
+.todo::-webkit-scrollbar {
+   display: none;
+ }
+ 
+ /* Hide scrollbar for IE, Edge and Firefox */
+ .todo {
+   -ms-overflow-style: none;  /* IE and Edge */
+   scrollbar-width: none;  /* Firefox */
+ }
 
-button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
+ /* break point */
 
-button:hover {
-  background-color: #0056b3;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
-}
-
-li:last-child {
-  border-bottom: none;
-}
+ @media only screen and (max-width:475px) {
+   .main-container{
+      justify-content: center;
+      margin-left: 0px;
+   }
+   .todo{
+      width: 300px;
+      padding: 23px;
+      max-height: 500px;
+   }
+   input{
+      width: 220px;
+      font-size: 1rem;
+   }
+   .text ul{
+      font-size: 1rem;
+      padding: 7px;
+      text-align: left;
+      margin: 5px 5px;
+      width: 220px;
+   }
+   .navbar{
+      padding: 10px 30px;
+   }
+ }
